@@ -1,0 +1,15 @@
+1. Cập nhật lại hệ thống(không bắt buộc):
+	yum update -y
+2. Cài đặt NVM(Node Version Manager) bằng 2 lệnh sau:
+	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | 
+	bash source /root/.bash_profile
+3. Cài NodeJS
+	#hiện danh sách các phiên bản nodejs từ nvm
+	nvm list-remote
+	
+	#Lựa chọn version nodejs muốn cài (ví dụ của mình là 14.5.0)
+	nvm install v14.5.0 -y
+	
+	#kiểm tra phiên bản nodejs xem đã cài thành công chưa bằng câu lệnh:
+	node -v #nếu xuất hiện: v14.5.0 đúng với phiên bản đã chọn ở trên là ok
+
