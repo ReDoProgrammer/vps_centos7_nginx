@@ -1,0 +1,18 @@
+1. Tạo 1 repo nginx bằng câu lệnh:
+	sudo yum install epel-release
+
+2. Cài đặt nginx
+	sudo yum install nginx -y
+
+3. Khởi động nginx server
+	sudo systemctl start nginx
+
+4. Thêm ngoại lệ cho tường lửa"
+	sudo firewall-cmd --permanent --zone=public --add-service=http 
+	sudo firewall-cmd --permanent --zone=public --add-service=https
+	sudo firewall-cmd --reload
+
+5. Khởi động nginx cùng hệ thống
+	sudo systemctl enable nginx
+
+6 test bằng ip vps hoặc domain
