@@ -1,0 +1,17 @@
+#Đối với VPS thì port mặc định của SSH thường là 22. 
+#Nếu bạn thay đổi port mặc định này, thì cần add port và đăng ký lại dịch vụ cho nó
+#Ví dụ: chuyển từ port 22 -> 4444 thì cần chạy cả 2 câu lệnh dưới:
+	sudo firewall-cmd --permanent --remove-service=ssh
+	sudo firewall-cmd --permanent --add-port=4444/tcp
+
+#Để chạy được web thì cần thiết phải chạy 2 dịch vụ http và https bằng câu lệnh sau:
+	sudo firewall-cmd --permanent --add-service=http
+	sudo firewall-cmd --permanent --add-service=https
+
+#Liên quan tới dịch vụ mail thì chạy lệnh sau:
+	sudo firewall-cmd --permanent --add-service=smtp
+	
+#Lệnh kiểm tra dịch vụ đang chạy:
+	sudo firewall-cmd --get-services
+	sudo firewall-cmd --permanent --list-all
+	

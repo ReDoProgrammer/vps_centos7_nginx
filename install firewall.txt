@@ -1,0 +1,17 @@
+1. Cài đặt firewall:
+	sudo yum install firewalld -y
+2. Khởi động firewall:
+	sudo systemctl start firewalld
+3. Thêm ngoại lệ cho ssh (mặc định đã active cho vps)
+	sudo firewall-cmd --permanent --add-service=ssh
+
+	-----Kết quả hiện ra như này:
+	#Warning: ALREADY_ENABLED: ssh
+	#success
+4: Cập nhật lại firewall:	
+	sudo firewall-cmd --reload
+
+5: Set firewall chạy cùng hệ thống khi khởi động:
+	sudo systemctl enable firewalld
+		
+		
