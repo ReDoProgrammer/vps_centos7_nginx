@@ -1,0 +1,22 @@
+#Để web có thể chạy ngầm được trên vps, chúng ta cần cài packet PM2:
+	npm install pm2@latest -g -y
+
+	#Sau khi cài đặt xong, kiểm tra version pm2 bằng lệnh:
+	pm2 -v
+	
+	#Kiểm tra trạng thái pm2 bằng lệnh:
+	pm2 status
+
+	#chạy project nodejs bằng lệnh (sau khi cd vào thư mục chứa source nodejs nhé)
+	pm2 start app.js #app.js là file nodejs bạn muốn chạy đầu tiên
+	
+	#dừng project nodejs bằng lệnh
+	pm2 stop app.js
+
+#Để upload source lên vps thì có thể up trực tiếp qua winscp hoặc FTP hoặc git
+# Cài đặt git bằng lệnh:
+	sudo yum install git -y
+#Kiểm tra phiên bản git bằng lệnh
+	git --version
+#clone source từ github về thư mục chứa source web trên vps ( sau khi đã cd vào thư mục rồi nhé ^_^)
+	git clone <link_github_của_bạn>
